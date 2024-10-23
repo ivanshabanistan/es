@@ -10,6 +10,9 @@
 .header__logo-container {
   width: 50%;
   height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 .header__logo {
   height: 40px;
@@ -17,7 +20,7 @@
   background-image: url("./assets/images/ES_Logo.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
 }
 .header__container {
   width: 50%;
@@ -103,7 +106,7 @@ nav {
 .burger-menu {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .email__text,
   .email__copied,
   .email__img {
@@ -113,7 +116,7 @@ nav {
     width: 86px;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 600px) {
   nav {
     display: none;
   }
