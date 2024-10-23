@@ -1,7 +1,7 @@
 const Approach = () => {
   return (
     <div>
-      <h1>Approach</h1>
+      <h1>Approach page</h1>
     </div>
   );
 };
