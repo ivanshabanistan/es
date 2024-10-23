@@ -8,38 +8,48 @@ const Layout = () => {
   const normalLink = "nav__link";
   return (
     <div className="header">
-      <NavLink to={"/"} className="header__logo"></NavLink>
-      <nav>
-        <ul className="nav">
-          <li className="nav__item">
-            <NavLink
-              to={"/about"}
-              className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            >
-              About
-            </NavLink>
-          </li>
-          <li className="nav__item">
-            <NavLink
-              to={"/approach"}
-              className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            >
-              Approach
-            </NavLink>
-          </li>
-          <li className="nav__item">
-            <NavLink
-              to={"/contacts"}
-              className={({ isActive }) => (isActive ? activeLink : normalLink)}
-            >
-              Contacts
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
-      <Email />
-      <BurgerMenu />
-      <Outlet />
+      <div className="header__logo-container">
+        <NavLink to={"/"} className="header__logo"></NavLink>
+      </div>
+      <div className="header__container">
+        <nav>
+          <ul className="nav">
+            <li className="nav__item">
+              <NavLink
+                to={"/about"}
+                className={({ isActive }) =>
+                  isActive ? activeLink : normalLink
+                }
+              >
+                About
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink
+                to={"/approach"}
+                className={({ isActive }) =>
+                  isActive ? activeLink : normalLink
+                }
+              >
+                Approach
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink
+                to={"/contacts"}
+                className={({ isActive }) =>
+                  isActive ? activeLink : normalLink
+                }
+              >
+                Contacts
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+        <Email />
+        <BurgerMenu />
+        <Outlet />
+      </div>
     </div>
   );
 };
